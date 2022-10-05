@@ -35,3 +35,11 @@ for(var i = 2; i < 21; i++){
 }
 
 }
+
+function total(){
+    let val = document.getElementById("valor").value;
+    let ju = document.getElementById("juros").value;
+
+    let resultado = (val * (1+ (ju/100)));
+    document.write("o resultado é " + resultado);
+}
