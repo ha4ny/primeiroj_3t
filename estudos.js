@@ -25,10 +25,9 @@ function minhaTabuada(){
     document.write(tabuada + " x " + j +" = " + (tabuada*i) +"<br>");
 }
 
-document.write(<br></br>);
+document.write(<br> /br>);
 }
 }
-
 function quadrado(){
 for(var i = 2; i < 21; i++){
     document.write("O quadrado de " + i + "é" + (i*i) + "<br>")
@@ -43,3 +42,32 @@ function total(){
     let resultado = (val * (1+ (ju/100)));
     document.write("o resultado é " + resultado);
 }
+
+
+function soma (){
+let v1= document.getElementById("v1").value;
+let v2= document.getElementById("v2").value;
+let r= (v1 + v2);
+document.getElementById("resultado").innerHTML = r;
+}
+
+function subtrair (){
+    let v1= document.getElementById("v1").value;
+    let v2= document.getElementById("v2").value;
+    let r= (v1 + v2);
+    document.getElementById("resultado").innerHTML = r;
+    }
+    
+    function subtrair (){
+        let v1= document.getElementById("v1").value;
+        let v2= document.getElementById("v2").value;
+        let r= (v1 + v2);
+        document.getElementById("resultado").innerHTML = r;
+        }
+        
+        function subtrair (){
+            let v1= document.getElementById("v1").value;
+            let v2= document.getElementById("v2").value;
+            let r= (v1 + v2);
+            document.getElementById("resultado").innerHTML = r;
+            }
