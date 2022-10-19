@@ -24,21 +24,33 @@ function minhaTabuada(){
    for(var j = 1; j <= 10; j++){
     document.write(tabuada + " x " + j +" = " + (tabuada*i) +"<br>");
 }
+ }
+document.write(<br></br>);
 
-document.write(<br> /br>);
-}
 }
 function quadrado(){
 for(var i = 2; i < 21; i++){
     document.write("O quadrado de " + i + "é" + (i*i) + "<br>")
 }
 
-}
+
 
 function total(){
     let val = document.getElementById("valor").value;
     let ju = document.getElementById("juros").value;
 
+    if(!number(val)){
+     alert("o valor deve ser um numero.");
+     document.getElementById("valor").value = "";
+     document.getElementById("valor").focus();
+    return
+    }
+    if(!number(ju)){
+        alert("o valor deve ser um numero.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+       return
+    }
     let resultado = (val * (1+ (ju/100)));
     document.write("o resultado é " + resultado);
 }
@@ -58,16 +70,17 @@ function subtrair (){
     document.getElementById("resultado").innerHTML = r;
     }
     
-    function dividir(){
-        let v1= document.getElementById("v1").value;
-        let v2= document.getElementById("v2").value;
-        let r= (v1 + v2);
-        document.getElementById("resultado").innerHTML = r;
-        }
-        
-        function multiplicar(){
-            let v1= document.getElementById("v1").value;
-            let v2= document.getElementById("v2").value;
-            let r= (v1 + v2);
-            document.getElementById("resultado").innerHTML = r;
-            }
+function dividir(){
+let v1= document.getElementById("v1").value;
+let v2= document.getElementById("v2").value;
+let r= (v1 + v2);
+document.getElementById("resultado").innerHTML = r;
+}        
+function multiplicar(){
+    let v1= document.getElementById("v1").value;
+    let v2= document.getElementById("v2").value;
+    let r= (Number(v1) * Number(v2));
+    document.getElementById("resultado").innerHTML = r;
+}
+ 
+}
