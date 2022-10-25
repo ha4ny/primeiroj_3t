@@ -33,11 +33,16 @@ for(var i = 2; i < 21; i++){
     document.write("O quadrado de " + i + "é" + (i*i) + "<br>")
 }
 
+function moeda(atual){
+   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+}
 
 
 function total(){
     let val = document.getElementById("valor").value;
     let ju = document.getElementById("juros").value;
+    let t = document.getElementById("meses").value;
 
     if(!number(val)){
      alert("o valor deve ser um numero.");
@@ -51,8 +56,20 @@ function total(){
         document.getElementById("juros").focus();
        return
     }
-    let resultado = (val * (1+ (ju/100)));
-    document.write("o resultado é " + resultado);
+    if(!number(t)){
+        alert("a quantidade de meses deve ser um numero.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+       return
+    }
+    let r = val;
+    for(let m= 1; m <= t; m++){
+        r = (val * (1+ (ju/100)));
+        val = r;
+        document.write("mês " + m + "valor: " + r + "<br>");
+    }
+    
+    document.write("o resultado é " + r);
 }
 
 
