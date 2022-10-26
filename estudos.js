@@ -66,10 +66,10 @@ function total(){
     for(let m= 1; m <= t; m++){
         r = (val * (1+ (ju/100)));
         val = r;
-        document.write("mês " + m + "valor: " + r + "<br>");
+        //document.write("mês " + m + "valor: " + r + "<br>");
     }
-    
-    document.write("o resultado é " + r);
+    document.getElementById("total").innerHTML = "total: "+moeda(r);
+    //document.write("o resultado é " + r);
 }
 
 
