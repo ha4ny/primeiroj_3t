@@ -7,34 +7,56 @@
     <title>Terceiro Trimestre</title>
     <link rel="stylesheet" href="geral.css">
     <script src="estudo.js"></script>
-
-
-    
 </head>
-
 <body>
-    <div class="calculadora">
-        <span id="total">total: 0,00</span><br>
-    capital: <input id="valor" type="text"> <br>
-    juros (mensais): <input id="juros" type="text"> <br>
+    <input type="checkbox" id="calcFin">
+    <div class="calculadora">  
+        <label for="calcFin"><h3>Financeira</h3></label>
+        <div class="calcF">
+        <div class="spTotal">
+            <span id="total">Totaḷ: 0,00</span> <br>
+        </div>
+        
+        Capital: <input id="valor" type="text"> <br>
+        Juros (mensais): <input id="juros" type="text"> <br>
+        Nr. Meses: <input id="meses" type="text"> <br>
+        <button id="btnCalc" onclick="total()"> Calcular </button>
+    
+        <div class="splistaMes">
+            <span id="listaMes">Meses</span>
+        </div>
+    </div>
+    </div>
+    
 
-    nr. meses  <input id="meses" type="text"> <br>
-    <button onclick="total()"> OK </button>
-   
  <br><br><br><br>
-
-<span id="resultado"></span><br>
- Valor 1: <input id="v1" type="text"><br>
+ <span id="resultado"></span><br>
+Valor 1: <input id="v1" type="text"><br>
 Valor 2: <input id="v2" type="text"><br>
+<button onclick="soma()"> + </button>
+<button onclick="subtração()"> - </button>
+<button onclick="divisão()"> / </button>
+<button onclick="multiplicação()"> * </button>
 
- <button id="btnCalc"> calcular </button>
-
-</div>
-
-<div list>
-    <span id="listaMes">meses</span>
-</div>
-
-<br><br><br>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
